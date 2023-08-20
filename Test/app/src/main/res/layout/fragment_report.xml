@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.report.ReportFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="40sp"
+        android:paddingTop="40sp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="20sp">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="60sp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/ivBack"
+                android:gravity="center_vertical"
+                android:paddingStart="10sp"
+                android:text="@string/back"
+                android:textColor="@color/darkBlue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewOne"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@id/rlBack"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_below="@id/viewOne">
+
+
+            <TextView
+                android:id="@+id/tvOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10sp"
+                android:text="@string/orders"
+                android:textColor="@color/darkBlue"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalSales"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/tvOrder"
+                android:gravity="center_vertical"
+                android:paddingStart="10sp"
+                android:text="0 Sales"
+                android:textColor="@color/darkBlue"
+                android:textSize="23sp" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewTwo"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@id/rlHeader"
+            android:background="@color/line" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llHeading"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_below="@id/viewTwo"
+            android:layout_marginTop="10dp"
+            android:background="@color/darkBlue"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvTransactionID"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight=".25"
+                android:gravity="center_vertical"
+                android:paddingStart="10sp"
+                android:text="@string/transaction_id"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvPStatus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:paddingStart="10sp"
+                android:text="@string/status"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight=".1"
+                android:gravity="center"
+                android:paddingStart="10sp"
+                android:text="@string/amount"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight=".15"
+                android:gravity="center"
+                android:paddingStart="10sp"
+                android:text="@string/items"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight=".1"
+                android:gravity="center"
+                android:paddingStart="10sp"
+                android:text="@string/quantity"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvCreatedDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:paddingStart="10sp"
+                android:text="@string/created_date"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOrders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/llHeading" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

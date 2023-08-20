@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="40sp"
+    android:paddingTop="40sp"
+    android:paddingEnd="40dp"
+    tools:context=".ui.selection.SelectionFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlAppName"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/abu_dhabi_language_center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlFooter"
+        android:layout_below="@id/rlAppName"
+        android:gravity="center_horizontal|center">
+
+        <RelativeLayout
+            android:id="@+id/rlNewOrder"
+            android:layout_width="300sp"
+            android:layout_height="300sp"
+            android:background="@drawable/rounder_bg"
+            android:backgroundTint="@color/darkBlue"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/ivNewOrder"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:src="@drawable/ic_new_order"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ivNewOrder"
+                android:gravity="center"
+                android:text="@string/new_order"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOrder"
+            android:layout_width="300sp"
+            android:layout_height="300sp"
+            android:layout_marginStart="30sp"
+            android:background="@drawable/rounder_bg"
+            android:backgroundTint="@color/darkBlue"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/ivOrder"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:padding="30dp"
+                android:src="@drawable/ic_store_order"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ivOrder"
+                android:gravity="center"
+                android:text="@string/order"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlReport"
+            android:layout_width="300sp"
+            android:layout_height="300sp"
+            android:layout_marginStart="30sp"
+            android:background="@drawable/rounder_bg"
+            android:backgroundTint="@color/darkBlue"
+
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/ivReport"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:padding="30dp"
+                android:src="@drawable/ic_report"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ivReport"
+                android:gravity="center"
+                android:text="@string/report"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFooter"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tvOfflineSyncing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:text="@string/offline_syncing"
+
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvPrinterStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:text="@string/printer_is_not_configured"
+            android:textColor="@color/red"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOfflineSyncing"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:text="@string/version_1_1"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvAbuDhbai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrinterStatus"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:text="@string/abu_dhabi_international_fair_book_2023"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
